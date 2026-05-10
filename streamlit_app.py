@@ -545,7 +545,7 @@ with tab1:
         label_map=label_map,
         gradcam_overlay=scratch_overlay,
         original_image=image,
-        col=st,
+        col=st.container(),
     )
 
 
@@ -560,7 +560,7 @@ with tab2:
         label_map=label_map,
         gradcam_overlay=transfer_overlay,
         original_image=image,
-        col=st,
+        col=st.container(),
     )
 
 
