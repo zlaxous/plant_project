@@ -1,0 +1,11 @@
+[
+  {
+    "epoch": 1,
+    "train_loss": 1.1976,
+    "train_acc": 0.8039,
+    "val_loss": 5.8981,
+    "val_acc": 0.0692,
+    "val_macro_f1": 0.0121,
+    "val_weighted_f1": 0.0098
+  }
+]

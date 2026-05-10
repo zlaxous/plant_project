@@ -1,0 +1,7 @@
+Model: PlantDiseaseModel
+Total parameters: 11,503,694
+Trainable parameters: 11,503,694
+Frozen parameters: 0
+Classes: 38
+Dropout: 0.3
+Sanity logits shape: (2, 38)

@@ -1,0 +1,44 @@
+[
+  {
+    "phase": "warmup",
+    "epoch": 1,
+    "train_loss": 0.6034,
+    "train_acc": 0.9426,
+    "val_loss": 0.4428,
+    "val_acc": 0.9926,
+    "val_macro_f1": 0.9904,
+    "val_macro_recall": 0.9904,
+    "val_weighted_f1": 0.9926,
+    "worst_classes": [
+      [
+        "Apple___Black_rot",
+        0.9857142857142858
+      ],
+      [
+        "Apple___Apple_scab",
+        0.9950248756218906
+      ]
+    ]
+  },
+  {
+    "phase": "finetune",
+    "epoch": 1,
+    "train_loss": 0.4916,
+    "train_acc": 0.9665,
+    "val_loss": 0.397,
+    "val_acc": 1.0,
+    "val_macro_f1": 1.0,
+    "val_macro_recall": 1.0,
+    "val_weighted_f1": 1.0,
+    "worst_classes": [
+      [
+        "Apple___Apple_scab",
+        1.0
+      ],
+      [
+        "Apple___Black_rot",
+        1.0
+      ]
+    ]
+  }
+]
