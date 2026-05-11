@@ -9,6 +9,7 @@ Three tabs: individual model views + side-by-side comparison mode.
 
 from __future__ import annotations
 
+import json
 import sys
 import time
 from pathlib import Path
@@ -154,6 +155,7 @@ DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 # Model checkpoint paths
 SCRATCH_CKPT = PROJECT_ROOT / "disscution_project" / "checkpoints" / "scratch_cnn_best.pt"
 TRANSFER_CKPT = PROJECT_ROOT / "plant_disease_detector" / "checkpoints" / "best.pt"
+TREATMENT_DB_PATH = PROJECT_ROOT / "data" / "treatment_db.json"
 
 # Evaluation transform (no augmentation)
 EVAL_TRANSFORM = transforms.Compose([
@@ -240,6 +242,62 @@ def confidence_badge(confidence: float) -> str:
     return "badge-red"
 
 
+def is_plant_healthy(class_name: str) -> bool:
+    """True if label indicates a healthy plant (PlantVillage naming)."""
+    return "healthy" in class_name.lower()
+
+
+@st.cache_data
+def load_treatment_db() -> dict[str, dict[str, str]]:
+    """Load class key → treatment fields from data/treatment_db.json."""
+    if not TREATMENT_DB_PATH.exists():
+        return {}
+    raw = json.loads(TREATMENT_DB_PATH.read_text(encoding="utf-8"))
+    return {str(k): v for k, v in raw.items() if isinstance(v, dict)}
+
+
+def render_treatment_suggestions(class_name: str, treatment_db: dict[str, dict[str, str]]) -> None:
+    """Show curated treatment steps for diseased plants; light guidance if healthy."""
+    st.markdown("**Treatment & management**")
+    if not treatment_db:
+        st.warning(
+            f"Treatment database not found at `{TREATMENT_DB_PATH}`. "
+            "Add `data/treatment_db.json` to enable suggestions."
+        )
+        return
+
+    entry = treatment_db.get(class_name)
+    if is_plant_healthy(class_name):
+        st.success("No disease-specific treatment needed — prediction is a **healthy** class.")
+        if entry:
+            prev = (entry.get("prevention") or "").strip()
+            if prev and prev.upper() != "N/A":
+                st.markdown(prev)
+        return
+
+    if not entry:
+        st.info(
+            "No matching entry in the treatment database for this label. "
+            "Confirm the diagnosis with a plant pathologist or extension service."
+        )
+        return
+
+    st.caption("Reference only — follow product labels, local regulations, and expert advice.")
+
+    sections: list[tuple[str, str]] = [
+        ("immediate", "Immediate actions"),
+        ("chemical", "Chemical options"),
+        ("organic", "Organic / softer options"),
+        ("prevention", "Prevention"),
+    ]
+    for key, title in sections:
+        text = (entry.get(key) or "").strip()
+        if not text or text.upper() == "N/A":
+            continue
+        st.markdown(f"**{title}**")
+        st.markdown(text)
+
+
 # ══════════════════════════════════════════════════════════════════════════
 # MODEL LOADING (CACHED)
 # ══════════════════════════════════════════════════════════════════════════
@@ -305,6 +363,7 @@ def render_model_results(
     result: dict,
     params: int,
     label_map: dict,
+    treatment_db: dict[str, dict[str, str]],
     gradcam_overlay: np.ndarray | None,
     original_image: Image.Image,
     col,
@@ -373,6 +432,9 @@ def render_model_results(
             st.markdown("**Grad-CAM Heatmap**")
             st.image(gradcam_overlay, caption=f"{model_name} — Activation Map", use_container_width=True)
 
+        st.markdown("<hr style='border:none;border-top:1px solid #e5e7eb;margin:1rem 0;'/>", unsafe_allow_html=True)
+        render_treatment_suggestions(top1_label, treatment_db)
+
         st.markdown("</div>", unsafe_allow_html=True)
 
 
@@ -424,6 +486,7 @@ st.sidebar.markdown("---")
 # Load models
 with st.spinner("Loading models..."):
     scratch_model, transfer_model, label_map, scratch_params, transfer_params = load_models()
+    treatment_db = load_treatment_db()
 
 st.sidebar.subheader("📦 Model Registry")
 st.sidebar.markdown(
@@ -543,6 +606,7 @@ with tab1:
         result=scratch_result,
         params=scratch_params,
         label_map=label_map,
+        treatment_db=treatment_db,
         gradcam_overlay=scratch_overlay,
         original_image=image,
         col=st.container(),
@@ -558,6 +622,7 @@ with tab2:
         result=transfer_result,
         params=transfer_params,
         label_map=label_map,
+        treatment_db=treatment_db,
         gradcam_overlay=transfer_overlay,
         original_image=image,
         col=st.container(),
@@ -650,6 +715,21 @@ with tab3:
         # Grad-CAM
         st.image(transfer_overlay, caption="Grad-CAM", use_container_width=True)
         st.markdown("</div>", unsafe_allow_html=True)
+
+    # ─── Treatment suggestions (linked to data/treatment_db.json) ─────────
+    st.markdown("<hr class='section-divider'>", unsafe_allow_html=True)
+    st.markdown("### 💊 Treatment guidance")
+    st.caption("Suggestions keyed to PlantVillage class names in `data/treatment_db.json`.")
+    if models_agree:
+        render_treatment_suggestions(scratch_label, treatment_db)
+    else:
+        tx_left, tx_right = st.columns(2)
+        with tx_left:
+            st.markdown(f"**Scratch CNN:** `{scratch_label}`")
+            render_treatment_suggestions(scratch_label, treatment_db)
+        with tx_right:
+            st.markdown(f"**EfficientNet-B3:** `{transfer_label}`")
+            render_treatment_suggestions(transfer_label, treatment_db)
 
     # ─── Comparison Metrics ─────────────────────────────────────────
     st.markdown("<hr class='section-divider'>", unsafe_allow_html=True)

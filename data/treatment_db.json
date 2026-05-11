@@ -1,0 +1,230 @@
+{
+  "Apple___Apple_scab": {
+    "immediate": "Remove and destroy infected leaves and fruit from the tree and ground.",
+    "chemical": "Apply myclobutanil or captan fungicide at early spring through petal fall.",
+    "organic": "Use sulfur-based fungicide or Bordeaux mixture before infection period.",
+    "prevention": "Prune trees to improve air circulation, rake fallen leaves in autumn, plant resistant cultivars."
+  },
+  "Apple___Black_rot": {
+    "immediate": "Prune out infected branches 6-8 inches below the visible canker.",
+    "chemical": "Apply captan or thiophanate-methyl fungicide during growing season.",
+    "organic": "Use copper-based fungicide, remove mummified fruit from trees.",
+    "prevention": "Remove dead or diseased wood during winter pruning, avoid wounding trees."
+  },
+  "Apple___Cedar_apple_rust": {
+    "immediate": "Remove galls from cedar trees within 2 miles if possible.",
+    "chemical": "Apply myclobutanil or mancozeb fungicide from pink through petal fall.",
+    "organic": "Use sulfur-based fungicide applied preventatively in spring.",
+    "prevention": "Remove nearby red cedar and juniper trees, plant resistant apple varieties."
+  },
+  "Apple___healthy": {
+    "immediate": "No treatment needed.",
+    "chemical": "N/A",
+    "organic": "N/A",
+    "prevention": "Continue good cultural practices: proper pruning, fertilization, and pest monitoring."
+  },
+  "Blueberry___healthy": {
+    "immediate": "No treatment needed.",
+    "chemical": "N/A",
+    "organic": "N/A",
+    "prevention": "Maintain proper soil pH (4.5-5.5), provide adequate irrigation and mulching."
+  },
+  "Cherry_(including_sour)___Powdery_mildew": {
+    "immediate": "Remove and destroy infected leaves and shoots.",
+    "chemical": "Apply sulfur-based or myclobutanil fungicide at first sign of disease.",
+    "organic": "Use neem oil or potassium bicarbonate spray weekly.",
+    "prevention": "Prune for good air circulation, avoid overhead irrigation, plant resistant varieties."
+  },
+  "Cherry_(including_sour)___healthy": {
+    "immediate": "No treatment needed.",
+    "chemical": "N/A",
+    "organic": "N/A",
+    "prevention": "Continue regular monitoring, proper pruning, and balanced fertilization."
+  },
+  "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot": {
+    "immediate": "No effective removal; focus on prevention for next season.",
+    "chemical": "Apply azoxystrobin or pyraclostrobin fungicide at tasseling stage.",
+    "organic": "Use copper-based fungicide at early symptom stage.",
+    "prevention": "Rotate with non-host crops (soybean), till crop residue, plant resistant hybrids."
+  },
+  "Corn_(maize)___Common_rust_": {
+    "immediate": "No effective removal; monitor for spread to upper leaves.",
+    "chemical": "Apply azoxystrobin or mancozeb fungicide if infection reaches upper canopy before tasseling.",
+    "organic": "Use sulfur-based fungicide at early symptom appearance.",
+    "prevention": "Plant resistant hybrids, avoid late planting, reduce irrigation frequency."
+  },
+  "Corn_(maize)___Northern_Leaf_Blight": {
+    "immediate": "No effective removal; monitor disease progression.",
+    "chemical": "Apply strobilurin fungicide (azoxystrobin) at early symptom stage.",
+    "organic": "Use copper-based fungicide as a preventative spray.",
+    "prevention": "Rotate crops with non-host crops, till under crop residue, use resistant hybrids."
+  },
+  "Corn_(maize)___healthy": {
+    "immediate": "No treatment needed.",
+    "chemical": "N/A",
+    "organic": "N/A",
+    "prevention": "Continue proper fertility management, timely planting, and weed control."
+  },
+  "Grape___Black_rot": {
+    "immediate": "Remove and destroy mummified fruit and infected canes during pruning.",
+    "chemical": "Apply mancozeb or myclobutanil fungicide at pre-bloom through post-bloom.",
+    "organic": "Use copper-based fungicide or sulfur dust applied weekly.",
+    "prevention": "Prune vines to improve air circulation, remove infected plant debris, use trellising."
+  },
+  "Grape___Esca_(Black_Measles)": {
+    "immediate": "Remove and destroy infected arms and canes, re-train replacement wood.",
+    "chemical": "Apply trunk wound protectants containing sodium arsenite (where permitted).",
+    "organic": "Prune only in dry weather, apply pruning wound sealants with boron.",
+    "prevention": "Avoid large pruning cuts, maintain vine vigor, minimize trunk injury."
+  },
+  "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)": {
+    "immediate": "Remove severely infected leaves from the vineyard floor.",
+    "chemical": "Apply mancozeb or copper-based fungicide during early season.",
+    "organic": "Use Bordeaux mixture or copper soap at leaf emergence.",
+    "prevention": "Ensure good canopy management, proper trellising, and balanced nutrition."
+  },
+  "Grape___healthy": {
+    "immediate": "No treatment needed.",
+    "chemical": "N/A",
+    "organic": "N/A",
+    "prevention": "Continue proper pruning, canopy management, and disease monitoring."
+  },
+  "Orange___Haunglongbing_(Citrus_greening)": {
+    "immediate": "Remove infected trees immediately to prevent spread to adjacent trees.",
+    "chemical": "No cure available; apply foliar nutrients and systemic insecticides for psyllid control.",
+    "organic": "Use kaolin clay sprays and neem oil for psyllid management.",
+    "prevention": "Use certified disease-free nursery stock, control Asian citrus psyllid with reflective mulch."
+  },
+  "Peach___Bacterial_spot": {
+    "immediate": "Remove severely infected twigs and branches during dormant season.",
+    "chemical": "Apply copper-based bactericide during dormant stage and at petal fall.",
+    "organic": "Use copper hydroxide or Bordeaux mixture in early spring.",
+    "prevention": "Plant resistant cultivars, avoid overhead irrigation, apply dormant copper spray."
+  },
+  "Peach___healthy": {
+    "immediate": "No treatment needed.",
+    "chemical": "N/A",
+    "organic": "N/A",
+    "prevention": "Continue proper pruning, thinning, and pest monitoring practices."
+  },
+  "Pepper,_bell___Bacterial_spot": {
+    "immediate": "Remove infected leaves and plants promptly.",
+    "chemical": "Apply copper-based bactericide every 7-10 days during wet weather.",
+    "organic": "Use Bacillus subtilis-based biofungicide or copper soap.",
+    "prevention": "Use disease-free seed, practice crop rotation, avoid working in wet fields."
+  },
+  "Pepper,_bell___healthy": {
+    "immediate": "No treatment needed.",
+    "chemical": "N/A",
+    "organic": "N/A",
+    "prevention": "Continue proper irrigation, fertilization, and integrated pest management."
+  },
+  "Potato___Early_blight": {
+    "immediate": "Remove infected foliage and destroy away from field.",
+    "chemical": "Apply chlorothalonil or mancozeb fungicide every 7-10 days.",
+    "organic": "Use compost tea or Bacillus subtilis-based products.",
+    "prevention": "Rotate crops with non-solanaceous crops, use certified seed potatoes."
+  },
+  "Potato___Late_blight": {
+    "immediate": "Remove and destroy all infected plant material immediately.",
+    "chemical": "Apply mancozeb or chlorothalonil fungicide preventatively every 5-7 days.",
+    "organic": "Use copper-based organic fungicides at first sign of disease.",
+    "prevention": "Plant resistant varieties, ensure good drainage, destroy volunteer potatoes."
+  },
+  "Potato___healthy": {
+    "immediate": "No treatment needed.",
+    "chemical": "N/A",
+    "organic": "N/A",
+    "prevention": "Continue proper crop rotation, use certified seed, and monitor for pests."
+  },
+  "Raspberry___healthy": {
+    "immediate": "No treatment needed.",
+    "chemical": "N/A",
+    "organic": "N/A",
+    "prevention": "Maintain proper pruning cycle, trellising, and adequate air flow."
+  },
+  "Soybean___healthy": {
+    "immediate": "No treatment needed.",
+    "chemical": "N/A",
+    "organic": "N/A",
+    "prevention": "Continue proper crop rotation, soil management, and pest scouting."
+  },
+  "Squash___Powdery_mildew": {
+    "immediate": "Remove heavily infected leaves and destroy them.",
+    "chemical": "Apply sulfur-based or myclobutanil fungicide at first sign of disease.",
+    "organic": "Use neem oil or potassium bicarbonate spray weekly.",
+    "prevention": "Provide good air circulation, avoid overhead watering, plant resistant varieties."
+  },
+  "Strawberry___Leaf_scorch": {
+    "immediate": "Remove infected leaves and improve air circulation.",
+    "chemical": "Apply captan or thiram fungicide during growing season.",
+    "organic": "Use neem oil spray or Bacillus subtilis biofungicide.",
+    "prevention": "Use disease-free transplants, practice crop rotation, renovate beds after harvest."
+  },
+  "Strawberry___healthy": {
+    "immediate": "No treatment needed.",
+    "chemical": "N/A",
+    "organic": "N/A",
+    "prevention": "Continue proper irrigation, mulching, and annual bed renovation."
+  },
+  "Tomato___Bacterial_spot": {
+    "immediate": "Remove affected leaves immediately to prevent spread.",
+    "chemical": "Apply copper-based bactericide (e.g., copper oxychloride) every 7-10 days.",
+    "organic": "Use neem oil solution (2%) or potassium bicarbonate spray.",
+    "prevention": "Practice crop rotation, avoid overhead watering, ensure good air circulation."
+  },
+  "Tomato___Early_blight": {
+    "immediate": "Remove infected leaves and destroy them away from the garden.",
+    "chemical": "Apply chlorothalonil or mancozeb fungicide every 7-10 days.",
+    "organic": "Use compost tea or Bacillus subtilis-based products.",
+    "prevention": "Mulch around plants, water at soil level, rotate crops annually."
+  },
+  "Tomato___Late_blight": {
+    "immediate": "Remove and destroy all infected plant material immediately.",
+    "chemical": "Apply mancozeb or chlorothalonil fungicide preventatively.",
+    "organic": "Use copper-based organic fungicides.",
+    "prevention": "Plant resistant varieties, avoid overhead watering, ensure good spacing."
+  },
+  "Tomato___Leaf_Mold": {
+    "immediate": "Remove infected leaves and improve air circulation.",
+    "chemical": "Apply chlorothalonil or mancozeb fungicide.",
+    "organic": "Use neem oil or copper-based sprays.",
+    "prevention": "Space plants properly, avoid overhead watering, use drip irrigation."
+  },
+  "Tomato___Septoria_leaf_spot": {
+    "immediate": "Remove infected leaves and destroy them.",
+    "chemical": "Apply chlorothalonil or mancozeb fungicide.",
+    "organic": "Use compost tea or neem oil.",
+    "prevention": "Mulch around plants, water at soil level, rotate crops."
+  },
+  "Tomato___Spider_mites Two-spotted_spider_mite": {
+    "immediate": "Spray leaves with strong stream of water to dislodge mites.",
+    "chemical": "Apply miticides like abamectin or bifenthrin.",
+    "organic": "Use neem oil, insecticidal soap, or introduce predatory mites.",
+    "prevention": "Maintain proper humidity, avoid drought stress, inspect plants regularly."
+  },
+  "Tomato___Target_Spot": {
+    "immediate": "Remove infected leaves and destroy them.",
+    "chemical": "Apply chlorothalonil or mancozeb fungicide.",
+    "organic": "Use copper-based fungicides.",
+    "prevention": "Practice crop rotation, ensure good air circulation, avoid overhead watering."
+  },
+  "Tomato___Tomato_Yellow_Leaf_Curl_Virus": {
+    "immediate": "Remove infected plants immediately to prevent spread.",
+    "chemical": "No effective chemical control available.",
+    "organic": "No effective organic control available.",
+    "prevention": "Use virus-resistant varieties, control whiteflies, use row covers."
+  },
+  "Tomato___Tomato_mosaic_virus": {
+    "immediate": "Remove infected plants and destroy them.",
+    "chemical": "No effective chemical control available.",
+    "organic": "No effective organic control available.",
+    "prevention": "Use virus-resistant varieties, disinfect tools, control aphids."
+  },
+  "Tomato___healthy": {
+    "immediate": "No treatment needed.",
+    "chemical": "N/A",
+    "organic": "N/A",
+    "prevention": "Continue good cultural practices: proper spacing, watering, and fertilization."
+  }
+}
